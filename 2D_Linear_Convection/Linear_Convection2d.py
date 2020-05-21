@@ -59,10 +59,10 @@ def data_gen(framenumber, u, plot):
     u[-1,:] = 1.
     u[:,0] = 1.
     u[:,-1] = 1.
-    for j in range(1, row): #x-direction loop
-        for i in range(1, col): #y-direction loop
-            u[1:-1,1:-1]=un[1:-1,1:-1]-(c*dt/dx*(un[1:-1,1:-1]-un[1:-1,0:-2]))-\
-                (c*dt/dy*(un[1:-1,1:-1]-un[0:-2,1:-1]))
+    
+    u[1:-1,1:-1]= un[1:-1,1:-1]-(c*dt/dx*(un[1:-1,1:-1]-un[1:-1,0:-2]))-\
+        (c*dt/dy*(un[1:-1,1:-1]-un[0:-2,1:-1]))
+        
     ax.clear()                      
     ax.set_xlabel('x')
     ax.set_ylabel('y')
