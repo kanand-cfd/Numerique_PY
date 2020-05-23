@@ -59,24 +59,24 @@ def data_gen(framenumber, u, plot):
     u[-1,:] = 1.
     u[:,0] = 1.
     u[:,-1] = 1.
-    
-    u[1:-1,1:-1]= un[1:-1,1:-1]-(c*dt/dx*(un[1:-1,1:-1]-un[1:-1,0:-2]))-\
+
+    u[1:-1,1:-1]=un[1:-1,1:-1]-(c*dt/dx*(un[1:-1,1:-1]-un[1:-1,0:-2]))-\
         (c*dt/dy*(un[1:-1,1:-1]-un[0:-2,1:-1]))
         
     ax.clear()                      
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
+    ax.set_xlabel('$x$')
+    ax.set_ylabel('$y$')
     ax.set_zlabel('$u(x,y)$')
     ax.set_title('2D Linear Convection')
     plot = ax.plot_surface(X, Y, u[:], **plot_args)
     return plot
 
 # %% Final plot and animation generation
-fig = plt.figure(figsize=(11,7), dpi=200) 
+fig = plt.figure(figsize=(12,10), dpi=400) 
 ax = fig.gca(projection='3d')                      
 ax.plot_surface(X,Y,u[:])
-ax.set_xlabel('x')
-ax.set_ylabel('y')
+ax.set_xlabel('$x$')
+ax.set_ylabel('$y$')
 ax.set_zlabel('$u(x,y)$')
 ax.set_title('2D Linear Convection')
 # surf = ax.plot_surface(X, Y, u[:], cmap=cm.viridis)
