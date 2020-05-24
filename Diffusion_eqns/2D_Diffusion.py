@@ -66,7 +66,7 @@ def data_gen(framenumber, u, plot):
     ax.set_ylabel('$y$')
     ax.set_zlabel('$u(x,y)$')
     ax.set_zlim(1, 2)
-    ax.set_title('2D Diffusion')
+    ax.set_title(r'$\frac{\partial V}{\partial t}=\nu {\nabla}^2 V$')
     plot = ax.plot_surface(X, Y, u[:], **plot_args)
     return plot
 
@@ -77,7 +77,7 @@ ax.plot_surface(X,Y,u[:])
 ax.set_xlabel('$x$')
 ax.set_ylabel('$y$')
 ax.set_zlabel('$u(x,y)$')
-ax.set_title('2D Diffusion')
+ax.set_title(r'$\frac{\partial V}{\partial t}=\nu {\nabla}^2 V$')
 plot = ax.plot_surface(X, Y, u[:], **plot_args)
 pam_ani = animation.FuncAnimation(fig, data_gen, fargs=(u, plot),
                               interval=50, blit=False)

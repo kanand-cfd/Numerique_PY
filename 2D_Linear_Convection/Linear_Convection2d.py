@@ -67,7 +67,7 @@ def data_gen(framenumber, u, plot):
     ax.set_xlabel('$x$')
     ax.set_ylabel('$y$')
     ax.set_zlabel('$u(x,y)$')
-    ax.set_title('2D Linear Convection')
+    ax.set_title(r'$\frac{\partial V}{\partial t} + c \cdot \nabla{V}=0$')
     plot = ax.plot_surface(X, Y, u[:], **plot_args)
     return plot
 
@@ -78,7 +78,7 @@ ax.plot_surface(X,Y,u[:])
 ax.set_xlabel('$x$')
 ax.set_ylabel('$y$')
 ax.set_zlabel('$u(x,y)$')
-ax.set_title('2D Linear Convection')
+ax.set_title(r'$\frac{\partial V}{\partial t} + c \cdot \nabla{V}=0$')
 # surf = ax.plot_surface(X, Y, u[:], cmap=cm.viridis)
 plot = ax.plot_surface(X, Y, u[:], **plot_args)
 pam_ani = animation.FuncAnimation(fig, data_gen, fargs=(u, plot),
