@@ -15,7 +15,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # %% Plot and animation specs
 plot_args = {'rstride': 1, 'cstride': 1, 'cmap':
-             cm.viridis, 'linewidth': 0.01, 'antialiased': True, 'color': 'k',
+             cm.RdBu, 'linewidth': 0.01, 'antialiased': True, 'color': 'k',
              'shade': True}
  
 Writer = animation.writers['ffmpeg']
@@ -68,6 +68,7 @@ def data_gen(framenumber, u, plot):
     ax.set_zlim(1, 2)
     ax.set_title(r'$\frac{\partial V}{\partial t}=\nu {\nabla}^2 V$')
     plot = ax.plot_surface(X, Y, u[:], **plot_args)
+    plt.tight_layout()
     return plot
 
 # %% Final plot and animation generation

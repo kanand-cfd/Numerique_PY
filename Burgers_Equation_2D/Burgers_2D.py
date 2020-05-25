@@ -15,7 +15,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # %% Plot and animation specs
 plot_args = {'rstride': 1, 'cstride': 1, 'cmap':
-             cm.viridis, 'linewidth': 0.01, 'antialiased': True, 'color': 'k',
+             cm.RdBu, 'linewidth': 0.01, 'antialiased': True, 'color': 'k',
              'shade': True}
  
 Writer = animation.writers['ffmpeg']
@@ -87,7 +87,7 @@ def data_gen(framenumber, u, v, plot):
     return plot
 
 # %% Final plot and animation generation
-fig = plt.figure(figsize=(12,10), dpi=400) 
+fig = plt.figure(figsize=(12,10), dpi=600) 
 ax = fig.gca(projection='3d')                      
 ax.plot_surface(X,Y,u[:])
 ax.set_xlabel('$x$')
