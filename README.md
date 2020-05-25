@@ -14,6 +14,15 @@ I will keep updating this from time to time as I develop more content.
 
 1) The Non-Linear Coupled equation is solved. The code is enclosed alongwith the documentation and animation.
 
+## Diffusion Equation
+
+1) 1D Diffusion equation
+2) 2D Diffusion equation
+
+## Burgers' Equation
+
+1) 2D Burgers' which combines all the PDEs discussed above in one system. We can visualize how coupled convection and diffusion evolve together in real time. 
+
 ## Runge-Kutta 4th Order Implementation
 
 1) 1D Linear Convection equation
